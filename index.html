@@ -1,38 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/style.css">
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <style>
+        
+    </style>
+    <title>The Weather</title>
+    
+    
+</head>
+
+<body>
+    <header id="header">
+        <h1>The Weather- 5 day forcast</h1>
+        
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+    
+    <main>
+        <Section class="search-Box">
+        <aside id="search">
+            <div class="search1">
+                <h2>Search for a city: </h2>
+                <input type="text" placeholder=" enter city" id="cityInput">
+                <div class="container">
+                <button type="button" class="btn btn-primary" id="searchButton">Search</button>
+                </div>
+            </div>
+          
+            <div class="search2" id="recentSearches"></div>
+        </Section>
+        </aside>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+
+        <section id="weatherData">
+        
+            <div id="weather">
+                <div id="currentWeatherData">
+                    <h2><span id="chosenCity"></span> <img id="currentIcon"></h2>
+                    <h4>Temperature: <span id="currentTemp"></span> &#176F</h4>
+                    <h4>Humidity: <span id="currentHumidity"></span> %</h4>
+                    <h4>Wind: <span id="currentWind"></span> MPH</h4>
+                    
+                </div>
+            </div>
+
+            <div id="weatherForecast">
+
+                <h2>5-day forecast: </h2>
+
+                <div id="weatherForecastCards">
+
+                    <div class="card" id="day1">
+                        <h3><span id="date1"></span></h3>
+                        <img id="icon1">
+                        <h5>Temp: <span id="temp1"></span> &#176F</h5>
+                        <h5>Humidity: <span id="humid1"></span> %</h5> 
+                        <h5>Wind: <span id="wind1"></span> MPH</h5>
+                        
+                        
+                    </div>
+
+                    <div class="card" id="day2">
+                        <h3><span id="date2"></span></h3>
+                        <img id="icon2">
+                        <h5>Temp: <span id="temp2"></span> &#176F</h5>
+                        <h5>Humidity: <span id="humid2"> %</span></h5>
+                        <h5>Wind: <span id="wind2"></span> MPH</h5>
+                        
+                    </div>
+
+                    <div class="card" id="day3">
+                        <h3><span id="date3"></span></h3>
+                        <img id="icon3">
+                        <h5>Temp: <span id="temp3"></span> &#176F</h5>
+                        <h5>Humidity: <span id="humid3"> %</span></h5>
+                        <h5>Wind: <span id="wind3"></span> MPH</h5>
+                        
+                    </div>
+
+                    <div class="card" id="day4">
+                        <h3><span id="date4"></span></h3>
+                        <img id="icon4">
+                        <h5>Temp: <span id="temp4"></span> &#176F</h5>
+                        <h5>Humidity: <span id="humid4"></span> %</h5>
+                        <h5>Wind: <span id="wind4"></span> MPH</h5>
+                        
+                    </div>
+
+                    <div class="card" id="day5">
+                        <h3><span id="date5"></span></h3>
+                        <img id="icon5">
+                        <h5>Temp: <span id="temp5"></span> &#176F</h5>
+                        <h5>Humidity: <span id="humid5"> %</span></h5>
+                        <h5>Wind: <span id="wind5"></span> MPH</h5> 
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+     
+
+<script src="./assets/script.js"></script>
+</body>
+
 </html>

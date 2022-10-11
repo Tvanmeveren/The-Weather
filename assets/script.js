@@ -122,7 +122,7 @@ function setWeather() {
                
                
 
-               //display five day forcast
+               //display the five day forcast
 
                //day one
                let forcastDayOne = document.getElementById("date1")
@@ -193,7 +193,7 @@ function setWeather() {
 }
 
 
-//when page loads display search history
+// search history is loaded 
 function onLoad(){
  
    let history = JSON.parse(localStorage.getItem("cities"))
@@ -213,12 +213,12 @@ function displaySearches(){
 
    let historyDiv = document.getElementById("recentSearches")
 
-   //clears our all recent history 
+   //clears history 
    while (historyDiv.firstChild) {
       historyDiv.removeChild(historyDiv.firstChild);
   }
   
-  //loads all history to page
+  //Loads the history to the page
    for(let i=history.length-1; i>=0; i--){
       let button = document.createElement("button")
       button.innerHTML=history[i]
